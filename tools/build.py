@@ -15,7 +15,7 @@ ARROW = '<span aria-hidden="true">↗</span>'
 VERSIONS = {
  'base': {
   'path':'', 'focus':'Reliable robotic manipulation',
-  'intro':'I work on deployed robotic manipulation systems at OSARO. I want to bring that experience to research on perception, failure understanding, and recovery in vision-language-action (VLA) systems.',
+  'intro':'My background is in deployed robotic manipulation. I want to bring that experience to research on perception, failure understanding, and recovery in vision-language-action (VLA) systems.',
   'tags':['Task-aware perception', 'Failure understanding', 'Adaptive recovery'],
   'research_title':'The questions behind the field work.',
   'research_intro':'Working with production robots has shaped the problems I want to study. My next step is graduate research on reliable, generalizable manipulation.',
@@ -27,7 +27,7 @@ VERSIONS = {
  },
  'srl': {
   'path':'srl', 'focus':'Scalable robot learning · Real-world evaluation',
-  'intro':'At OSARO, I investigate perception and grasping failures in deployed robots. I want to study robot policies that generalize across real-world conditions, and evaluation methods that reveal where those policies fail.',
+  'intro':'I investigate perception and grasping failures in deployed robots. I want to study robot policies that generalize across real-world conditions, and evaluation methods that reveal where those policies fail.',
   'tags':['Real-world policy evaluation', 'Generalization', 'Failure understanding'],
   'research_title':'Learning that holds up in deployment.',
   'research_intro':'Reflective packaging taught me how a small perception failure can interrupt an entire robot cycle. That experience motivates my interest in robust robot policies and meaningful real-world evaluation.',
@@ -39,7 +39,7 @@ VERSIONS = {
  },
  'rophi': {
   'path':'rophi', 'focus':'Perception · Geometry · Reliable manipulation',
-  'intro':'At OSARO, I have seen unreliable depth observations interrupt robotic manipulation. I want to study how perception and feedback control can work together to make robot actions more robust in the physical world.',
+  'intro':'I have seen unreliable depth observations interrupt deployed robotic manipulation. I want to study how perception and feedback control can work together to make robot actions more robust in the physical world.',
   'tags':['Perception uncertainty', 'Reactive manipulation', 'Sensor–control integration'],
   'research_title':'Connecting perception to reliable action.',
   'research_intro':'My experience spans a production robot’s perception failures and the embedded control of a mobile manipulator. I want to understand how reliable representations and feedback can bridge the gap between seeing and acting.',
@@ -65,6 +65,135 @@ CSS = '''
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 @media print{.site-header{position:static}.nav-links,.hero-actions,.contact-section details,video{display:none}.wrap{width:100%}.section{padding:25px 0}.hero{padding:20px 0}.metrics{margin-bottom:25px}.research{background:#eee;color:#111}.research p,.research .kicker,.research-questions p{color:#333}body{font-size:11px}a{text-decoration:none}.section,.case,.project-hero{break-inside:avoid}}
 .osaro-intro{margin:8px 0 28px}.osaro-intro-visual{position:relative;background:#e9eee6;border-radius:4px;overflow:hidden}.osaro-intro img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}.intro-speed{position:absolute;top:15px;right:15px;background:rgba(22,44,37,.86);color:#fff;font:600 10px var(--mono);padding:7px 9px;letter-spacing:.08em;border-radius:3px}.osaro-intro-meta{display:flex;justify-content:space-between;align-items:start;gap:18px;margin-top:12px}.intro-heading{font-size:14px;font-weight:650;margin:0}.osaro-intro-meta .caption{margin-top:3px}.intro-toggle{background:transparent;border:1px solid var(--line);padding:7px 12px;border-radius:3px;font:500 11px 'DM Sans',Arial,sans-serif;color:var(--green);cursor:pointer;white-space:nowrap}.intro-toggle:hover{background:var(--soft)}.intro-toggle[hidden]{display:none}@media(max-width:650px){.intro-speed{top:10px;right:10px;font-size:8px;padding:5px 7px}.intro-heading{font-size:12px}.osaro-intro-meta .caption{font-size:9px}.intro-toggle{font-size:10px;padding:6px 8px}.osaro-intro-meta{gap:10px}}
+
+/* Readable hierarchy: headings lead the text; company facts stay together. */
+body{font-size:17px}
+.kicker{font:650 18px/1.5 var(--title);letter-spacing:.025em}
+.nav-links a{font-size:14px}
+.hero-intro{font-size:18px}
+.focus-line{font-size:19px;line-height:1.5}
+.hero-actions{font-size:16px}
+.profile figcaption{font-size:12px;line-height:1.5;flex-wrap:wrap}
+.hero .kicker{font-size:19px}
+.section-head>p{font-size:17px;max-width:420px}
+#experience{padding-top:42px}
+.experience-title{font-size:clamp(48px,6vw,68px);letter-spacing:-.055em}
+.company-top{grid-template-columns:1fr 1fr;align-items:start;margin:30px 0 34px;gap:40px}
+.company-tenure{padding:0 0 0 20px;border-left:4px solid var(--green)}
+.tenure-value{display:block;font:750 clamp(36px,4.2vw,49px)/1.15 var(--title);letter-spacing:-.045em}
+.company-dates{font-size:23px;font-weight:650;margin:9px 0 8px}
+.company-meta{font-size:17px;line-height:1.55}
+.roles{padding-left:25px}
+.roles p{margin-bottom:22px}
+.roles .role-label{font-size:17px;font-weight:600;color:var(--muted);margin-bottom:4px}
+.roles strong{font-size:26px;line-height:1.3;font-weight:750}
+.roles .role-date{font-size:18px;color:var(--muted);margin-top:6px}
+.metrics{margin:0 0 34px;background:var(--green);border-color:var(--green)}
+.metric,.metric:nth-child(1){background:var(--green);color:#f6faee;padding:27px 26px}
+.metric+.metric{border-color:#68836a}
+.metric-title{font-size:23px;line-height:1.3;min-height:60px;margin:0 0 18px;letter-spacing:-.02em;color:#f6faee}
+.metric-value{font-size:clamp(35px,3.8vw,47px)}
+.metric-value .arrow,.metric:first-child .arrow{color:var(--lime)}
+.metric .unit{font-size:20px}
+.metric p,.metric:first-child p{font-size:16px;line-height:1.65;color:#deead7;margin-top:17px;max-width:none}
+.metric p strong{font-weight:650}
+.caption,.company-photos .caption{font-size:13px;line-height:1.65}
+.case-tag{font-size:17px;font-family:var(--title);white-space:normal}
+.case-title{grid-template-columns:1fr auto}
+.case-intro{font-size:17px}
+.reference-label{font:650 17px/1.4 var(--title);letter-spacing:0;gap:12px;flex-wrap:wrap}
+.flow-step{grid-template-columns:38px 1fr;padding:16px 0}
+.flow-n{font-size:14px;width:36px;height:36px}
+.flow-step:not(:last-child):after{left:18px;top:49px}
+.flow-step h4{font-size:21px;line-height:1.35}
+.flow-step p{font-size:16px;line-height:1.65;margin-top:7px}
+.contribution{grid-template-columns:185px 1fr}
+.contribution p,.detail-body{font-size:16px}
+summary{font-size:19px;line-height:1.5}
+.depth-reference h4{font-size:21px}.depth-reference p{font-size:16px}
+.small-label{font:650 19px/1.4 var(--title);letter-spacing:.02em;display:block}
+.work-strip h4{font-size:23px;line-height:1.35}
+.work-strip p{font-size:16px;line-height:1.7}
+.image-corner{font:650 17px/1.4 var(--title);letter-spacing:0;right:16px}
+.project-deck{font-size:17px}
+.project-facts span{font-size:17px;line-height:1.4;display:block;margin-top:5px}
+.project-info .role-label{font-size:20px;line-height:1.5}
+.project-info .role-copy{font-size:16px;line-height:1.7}
+.text-links{font-size:16px}
+.system-row{grid-template-columns:1fr 1fr 1.8fr}
+.system-node strong{font-size:20px;line-height:1.4}
+.system-node span{font-size:16px;line-height:1.5}
+.system-note{font-size:14px;line-height:1.6}
+.owned{font-size:14px!important}
+.project-media h4{font-size:22px;line-height:1.4}
+.other-project h3{font-size:27px}
+.other-project>p{font-size:16px}
+.mini-flow span{font-size:15px}
+.tech-line{font-size:17px!important;line-height:1.6}
+.research-intro{font-size:17px}
+.research-questions .question-n{font-size:16px}
+.research-questions h3{font-size:23px;line-height:1.4}
+.research-questions p{font-size:16px;line-height:1.7}
+.fit>p:not(.kicker){font-size:17px}
+.education-item h3{font-size:24px}
+.education-item p{font-size:16px}
+.education-item .school-meta{font-size:16px;line-height:1.5;flex-wrap:wrap;font-family:inherit}
+.skill-group h4{font-size:20px}
+.skill-group p{font-size:16px}
+.contact-row p{font-size:16px}
+.contact-email{font-size:22px}
+.contact-links{font-size:17px}
+.footer{font-size:13px}
+.credits-summary{font-size:16px}
+.credits-body{font-size:14px}
+.intro-heading{font-size:22px}.osaro-intro-meta .caption{font-size:13px}
+.intro-speed{font-size:14px}.intro-toggle{font-size:16px}
+@media(max-width:900px){
+ .company-top{gap:28px}.roles strong{font-size:23px}
+ .metric{padding:23px 20px}.metric-title{font-size:21px}.metric p{font-size:15px}
+ .case-title{grid-template-columns:1fr}.case-tag{justify-self:start}
+ .work-strip{gap:20px}.work-strip h4{font-size:21px}
+ .system-row{grid-template-columns:1fr 1fr}.system-outputs{grid-column:1/-1}
+ .contribution{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:650px){
+ body{font-size:16px}.nav-links{gap:13px}.nav-links a{font-size:13px}.nav-cv{padding:6px 8px}
+ .brand{font-size:16px;white-space:nowrap;flex-shrink:0}.nav{gap:10px}.nav-cv{white-space:nowrap}
+ .kicker{font-size:17px;line-height:1.5;letter-spacing:.01em}
+ .hero .kicker{font-size:17px}.hero-intro{font-size:16px}.focus-line{font-size:18px}
+ .hero-actions{font-size:15px;gap:12px}.hero-actions a{white-space:nowrap}.hero-actions .button{gap:10px}.section-head>p{font-size:16px}
+ #experience{padding-top:30px}.experience-title{font-size:52px}
+ .company-top{grid-template-columns:1fr;gap:26px;margin-top:24px}
+ .tenure-value{font-size:44px}.company-dates{font-size:22px}.company-meta{font-size:16px}
+ .roles{display:block;padding-left:20px}.roles p{margin-bottom:22px}
+ .roles strong{font-size:24px}.roles .role-label{font-size:17px}.roles .role-date{font-size:18px}
+ .metrics{margin-bottom:28px}.metric{display:block;padding:25px 22px}
+ .metric-title{font-size:22px;min-height:0;margin-bottom:14px}
+ .metric-value{font-size:43px}.metric .unit{font-size:19px}
+ .metric p,.metric:first-child p{font-size:16px;margin-top:14px}
+ .company-photos{grid-template-columns:1fr;gap:22px}.company-photos img{height:auto;aspect-ratio:16/9}
+ .caption,.company-photos .caption{font-size:13px}
+ .case-title h3{font-size:29px}.case-intro{font-size:16px}.case-tag{font-size:17px}
+ .reference-label{font-size:17px}.flow-step h4{font-size:21px}.flow-step p{font-size:16px}
+ .contribution p,.detail-body{font-size:16px}
+ summary{font-size:19px}.small-label{font-size:19px}.work-strip h4{font-size:23px}.work-strip p{font-size:16px}
+ .project-image{padding-top:64px}.image-corner{font-size:17px}
+ .project-deck{font-size:16px}.project-facts{gap:16px;flex-wrap:wrap}
+ .project-facts span{font-size:17px}.project-info .role-label{font-size:20px}.project-info .role-copy{font-size:16px}
+ .text-links{font-size:16px}.system-row{grid-template-columns:1fr}.system-outputs{grid-template-columns:1fr;gap:20px}
+ .system-node strong{font-size:21px}.system-node span{font-size:16px}.system-note{font-size:14px}
+ .project-media h4{font-size:22px}.other-project h3{font-size:27px}.other-project>p{font-size:16px}
+ .mini-flow{gap:7px}.mini-flow span{font-size:13px;padding:9px}
+ .tech-line{font-size:17px!important}.research-intro{font-size:16px}
+ .research-questions h3{font-size:23px}.research-questions p{font-size:16px}
+ .fit>p:not(.kicker){font-size:16px}.education-item h3{font-size:24px}
+ .contact-row p{font-size:16px}.contact-email{font-size:20px}.contact-links{font-size:17px}
+ .footer{font-size:13px;flex-wrap:wrap}.credits-body{font-size:14px}
+ .intro-heading{font-size:21px}.osaro-intro-meta{flex-wrap:wrap}.osaro-intro-meta .caption{font-size:13px}
+ .intro-speed{font-size:13px}.intro-toggle{font-size:16px}
+}
+@media(max-width:360px){.brand{font-size:15px}.nav-links{gap:10px}.nav-links a{font-size:12px}.nav-cv{padding:6px}}
+
 '''
 
 JS = '''
@@ -122,12 +251,12 @@ def page(key, v):
 <link rel="icon" href="{A}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{A}style.css"><script defer src="{A}main.js"></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><nav class="wrap nav" aria-label="Main navigation"><a class="brand" href="#top">Hangyul Bae<span>.</span></a><div class="nav-links"><a href="#experience">Experience</a><a href="#projects">Robotics</a><a class="nav-research" href="#research">Research</a><a class="nav-cv" href="{CV}" target="_blank" rel="noopener noreferrer">CV {ARROW}</a></div></nav></header>
-<main id="main"><div class="wrap" id="top"><section class="hero" aria-labelledby="name"><div class="hero-main"><p class="kicker"><span class="status-dot" aria-hidden="true"></span>Robotics engineer · Graduate research applicant</p><h1 id="name">Hangyul Bae</h1><p class="name-note">Daniel · 배한결</p><p class="hero-intro">{escape(v['intro'])}</p><p class="focus-line">{escape(v['focus'])}</p><div class="hero-actions"><a class="button" href="#experience">Explore my work <span aria-hidden="true">↓</span></a><a href="mailto:han00191925@gmail.com">Get in touch {ARROW}</a></div></div><figure class="profile"><img class="profile-photo" src="{A}portrait.webp" alt="Portrait of Hangyul (Daniel) Bae" width="512" height="512" fetchpriority="high"><figcaption><span>HANGYUL (DANIEL) BAE</span><span>KR</span></figcaption></figure></section>
-<div class="hero-subline"><span><strong>System Solutions Engineer</strong> · OSARO</span><span>Jun 2024–Present <span aria-hidden="true">/</span> 2+ years in production robotics</span></div>
-<section class="metrics" aria-label="Selected engineering contributions at OSARO"><article class="metric"><p class="kicker">01 / Reject rate</p><div class="metric-value" aria-label="Reject rate: eight percent to three percent">8<span class="unit">%</span> <span class="arrow" aria-hidden="true">→</span> 3<span class="unit">%</span></div><p>Contributed through <strong>multi-pick analysis, model parameter tuning, and labeling tools.</strong></p></article><article class="metric"><p class="kicker">02 / Autobagging throughput</p><div class="metric-value" aria-label="Throughput: 230 to 300 units per hour">230 <span class="arrow" aria-hidden="true">→</span> 300<span class="unit"> /h</span></div><p>Contributed through <strong>cycle profiling and sequence / parameter optimization.</strong></p></article><article class="metric"><p class="kicker">03 / Analysis workflow</p><div class="metric-value" aria-label="Analysis time: over eight hours to under two hours">&gt;8<span class="unit">h</span> <span class="arrow" aria-hidden="true">→</span> &lt;2<span class="unit">h</span></div><p>Built <strong>Python log-parsing and error-video retrieval tools.</strong></p></article></section>
+<main id="main"><div class="wrap" id="top"><section class="hero" aria-labelledby="name"><div class="hero-main"><p class="kicker"><span class="status-dot" aria-hidden="true"></span>Robotics engineer</p><h1 id="name">Hangyul Bae</h1><p class="name-note">Daniel · 배한결</p><p class="hero-intro">{escape(v['intro'])}</p><p class="focus-line">{escape(v['focus'])}</p><div class="hero-actions"><a class="button" href="#experience">Explore my work <span aria-hidden="true">↓</span></a><a href="#contact">Get in touch <span aria-hidden="true">↓</span></a></div></div><figure class="profile"><img class="profile-photo" src="{A}portrait.webp" alt="Portrait of Hangyul (Daniel) Bae" width="512" height="512" fetchpriority="high"><figcaption><span>HANGYUL (DANIEL) BAE</span><span>KR</span></figcaption></figure></section>
 
-<section class="section" id="experience"><div class="section-head"><div><p class="kicker"><span class="section-num">01 /</span> Professional experience</p><h2>Engineering on deployed robots.</h2></div><p>Diagnosing failures, building tools, and validating improvements with software and ML teams.</p></div>
-<div class="company-top"><div><h3 class="company-name">OSARO</h3><p class="company-meta">Robotic manipulation &amp; automation · Jun 2024–Present</p></div><div class="roles"><p><strong>System Solutions Engineer</strong><span>Apr 2026–Present</span></p><p><strong>Solutions Support Engineer</strong><span>Jun 2024–Mar 2026</span></p></div></div>
+
+<section class="section" id="experience"><div class="section-head"><div><p class="kicker"><span class="section-num">01 /</span> Professional experience</p><h2 class="experience-title">OSARO</h2></div><p>Diagnosing failures, building tools, and validating improvements with software and ML teams.</p></div>
+<div class="company-top"><div class="company-tenure"><strong class="tenure-value">2+ years</strong><p class="company-dates">Jun 2024–Present</p><p class="company-meta">Production robotic manipulation &amp; automation</p></div><div class="roles"><p><span class="role-label">Current role</span><strong>System Solutions Engineer</strong><span class="role-date">Apr 2026–Present</span></p><p><span class="role-label">Previous role</span><strong>Solutions Support Engineer</strong><span class="role-date">Jun 2024–Mar 2026</span></p></div></div>
+<section class="metrics" aria-label="Selected engineering contributions at OSARO"><article class="metric"><h3 class="metric-title">Reject rate</h3><div class="metric-value" aria-label="Reject rate: eight percent to three percent">8<span class="unit">%</span> <span class="arrow" aria-hidden="true">→</span> 3<span class="unit">%</span></div><p>Contributed through <strong>multi-pick analysis, model parameter tuning, and labeling tools.</strong></p></article><article class="metric"><h3 class="metric-title">Autobagging throughput</h3><div class="metric-value" aria-label="Throughput: 230 to 300 units per hour">230 <span class="arrow" aria-hidden="true">→</span> 300<span class="unit"> /h</span></div><p>Contributed through <strong>cycle profiling and sequence / parameter optimization.</strong></p></article><article class="metric"><h3 class="metric-title">Analysis workflow</h3><div class="metric-value" aria-label="Analysis time: over eight hours to under two hours">&gt;8<span class="unit">h</span> <span class="arrow" aria-hidden="true">→</span> &lt;2<span class="unit">h</span></div><p>Built <strong>Python log-parsing and error-video retrieval tools.</strong></p></article></section>
 <figure class="osaro-intro" data-gif-intro><div class="osaro-intro-visual" style="background-image:url('{A}osaro-intro-poster.webp?v=2');background-size:cover;background-position:center"><picture><source type="image/webp" srcset="{A}osaro-intro-poster.webp?v=2" data-animated-src="{A}osaro-intro.webp?v=2"><img src="{A}osaro-intro-poster.webp?v=2" data-animated-src="{A}osaro-intro.gif?v=2" alt="OSARO robotic system repeatedly picking and transferring items inside an automated production cell" width="720" height="406" loading="lazy"></picture><span class="intro-speed">2× SPEED</span></div><figcaption class="osaro-intro-meta"><div><p class="intro-heading">OSARO robotic system in operation</p><p class="caption">30-second loop · 2× playback speed · Video supplied by Hangyul Bae · <a href="{A}osaro-intro.gif?v=2" download>Download GIF</a></p></div><button class="intro-toggle" type="button" aria-pressed="false" hidden>Play animation</button></figcaption></figure>
 <div class="company-photos"><figure><img src="{A}osaro-zenni-bagging.webp" alt="OSARO robotic bagging system in a production cell at Zenni Optical" width="720" height="404" loading="lazy"><figcaption class="caption"><span>Robotic bagging · Company reference photo</span><a href="{OSARO}" target="_blank" rel="noopener noreferrer">Source: OSARO {ARROW}</a></figcaption></figure><figure><img src="{A}osaro-zenni-picking.webp" alt="Close-up of an OSARO robot using suction to pick an item" width="720" height="407" loading="lazy"><figcaption class="caption"><span>Robotic picking · Company reference photo</span><a href="{PICK}" target="_blank" rel="noopener noreferrer">Source: OSARO {ARROW}</a></figcaption></figure></div>
 
